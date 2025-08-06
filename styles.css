@@ -101,11 +101,24 @@
     border: none;
     outline: none;
     border-radius: 4px;
-    background: #1B4DE3;
-    background: -webkit-linear-gradient(to right, #FFFFFF, #E4080A,#1B4DE3 );
-    background: linear-gradient(to right, #FFFFFF, #E4080A, #1B4DE3);
+    background: #ff0000; /* Start with red */
     color: #fff;
     transition: all 0.3s ease;
+    animation: colorShift 3s linear infinite;
+}
+
+@keyframes colorShift {
+    0% {
+        background: #ff0000; /* Red */
+    }
+
+    50% {
+        background: #1B4DE3; /* Blue */
+    }
+
+    100% {
+        background: #ffffff; /* White */
+    }
 }
 
 .button:hover {
