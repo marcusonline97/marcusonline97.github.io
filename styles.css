@@ -106,28 +106,9 @@
     background: linear-gradient(to right, #E4080A, #CC6CE7, #5D72E9);
     color: #fff;
     transition: all 0.3s ease;
-    animation-play-state: paused;
 }
 /* #E4080A, #CC6CE7, #5D72E9*/
 
-.button:hover {
-  animation-play-state: running;
-  animation-delay: 0.3s;
-}
-
-@keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
 .navbar__links:hover {
   color: #9518fc;
   transition: all 0.3s ease;
