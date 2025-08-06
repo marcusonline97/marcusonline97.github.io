@@ -56,7 +56,12 @@
 }
 
 .navbar__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 80px;
+    padding: 0 1rem;
+    width: 100%;
 }
 
 .navbar__links {
