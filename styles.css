@@ -101,12 +101,30 @@
     border: none;
     outline: none;
     border-radius: 4px;
-    background: #E4080A; /* Start with red */
+    /*
+    background: #E4080A; /* Start with red 
     color: #fff;
     transition: all 0.3s ease;
-    animation: colorShift 6s linear infinite;
+    animation: colorShift 6s linear infinite; */
+    color: #fff;
+    background: linear-gradient(270deg, #FFFFFF, #E4080A, #1B4DE3, #FFFFFF);
+    background-size: 600% 600%;
+    animation: gradientMove 6s ease-in-out infinite;
+    transition: color 0.3s ease;
 }
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
 
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
 @keyframes colorShift {
     0% {
         background: #E4080A; /* Red */
