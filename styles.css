@@ -459,8 +459,8 @@
     }
 }
 
-/* Services Section */
-.services {
+/* Portfolio Section */
+.portfolio {
     background: #131313;
     display: flex;
     flex-direction: column;
@@ -521,13 +521,13 @@
         font-size: 20px;
     }
 
-.services__btn {
+.portfolio__btn {
     display: flex;
     justify-content: center;
     margin-top: 16px;
 }
 
-.services__card button {
+.portfolio__card button {
     color: #fff;
     padding: 14px 24px;
     border: none;
@@ -537,24 +537,24 @@
     font-size: 1rem;
 }
 
-    .services__card button:hover {
+    .portfolio__card button:hover {
         cursor: pointer;
     }
 
-.services__card:hover {
+.portfolio__card:hover {
     transform: scale(1.075);
     transition: 0.3s ease-in;
     cursor: pointer;
 }
 
 @media screen and (max-width: 1300px) {
-    .services__wrapper {
+    .portfolio__wrapper {
         grid-template-columns: 1fr 1fr;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .services__wrapper {
+    .portfolio__wrapper {
         grid-template-columns: 1fr;
     }
 }
