@@ -105,7 +105,7 @@
     background: -webkit-linear-gradient(to right, #E4080A, #CC6CE7, #5D72E9);
     background: linear-gradient(to right, #E4080A, #CC6CE7, #5D72E9);
     color: #CC6CE7;
-    transition: all 0.7s ease;
+    transition: all 10s ease;
 }
 
 /*
