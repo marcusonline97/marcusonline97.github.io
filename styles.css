@@ -108,12 +108,12 @@
     transition: all 0.3s ease;
 }
 
-
+/*
 .button:hover {
     background: #4837ff;
     transition: all 0.10s ease;
 }
-
+    */
 .navbar__links:hover {
     color: #9518fc;
     transition: all 0.3s ease;
