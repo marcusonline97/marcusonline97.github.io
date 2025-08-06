@@ -102,8 +102,8 @@
     outline: none;
     border-radius: 4px;
     background: #5D72E9;
-    background: -webkit-linear-gradient(to right, #E4080A, #CECECE, #5D72E9);
-    background: linear-gradient(to right, #E4080A, #CECECE, #5D72E9);
+    background: -webkit-linear-gradient(to right, #E4080A, #E7DDFF, #5D72E9);
+    background: linear-gradient(to right, #E4080A, #E7DDFF, #5D72E9);
     color: #fff;
     transition: all 0.5s ease;
 }
