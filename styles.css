@@ -75,7 +75,7 @@
     border: none;
     outline: none;
     border-radius: 4px;
-    background: #833ab4;
+    background: #1B4DE3;
     background: -webkit-linear-gradient(to right, #FFFFFF, #E4080A,#1B4DE3 );
     background: linear-gradient(to right, #FFFFFF, #E4080A, #1B4DE3);
     color: #fff;
@@ -101,9 +101,9 @@
     border: none;
     outline: none;
     border-radius: 4px;
-    background: #833ab4;
-    background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
-    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+    background: #1B4DE3;
+    background: -webkit-linear-gradient(to right, #FFFFFF, #E4080A,#1B4DE3 );
+    background: linear-gradient(to right, #FFFFFF, #E4080A, #1B4DE3);
     color: #fff;
     transition: all 0.3s ease;
 }
