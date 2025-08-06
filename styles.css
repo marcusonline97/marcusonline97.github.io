@@ -104,16 +104,15 @@
     background: #5D72E9;
     background: -webkit-linear-gradient(to right, #E4080A, #CC6CE7, #5D72E9);
     background: linear-gradient(to right, #E4080A, #CC6CE7, #5D72E9);
-    color: #FFFFFF;
+    color: #fff;
     transition: all 0.3s ease;
 }
+/* #E4080A, #CC6CE7, #5D72E9*/
 
-/*
-.button:hover {
-    background: #4837ff;
-    transition: all 0.10s ease;
+.navbar__links:hover {
+  color: #9518fc;
+  transition: all 0.3s ease;
 }
-    */
 .navbar__links:hover {
     color: #9518fc;
     transition: all 0.3s ease;
