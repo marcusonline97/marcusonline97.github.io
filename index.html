@@ -45,12 +45,38 @@
         </header>
 
         <section id="about" class="mb-20">
-            <h2 class="text-3xl font-bold text-white mb-6 text-center">About Me</h2>
-            <p class="max-w-3xl mx-auto text-lg leading-relaxed text-center">
-                I am an aspiring game programmer who likes to apply first principles to solve complex problems. My journey in game development has been driven by a love for creating efficient, elegant solutions and a fascination with programming languages and engines. I enjoy working on projects that challenge my skills and allow me to learn new technologies and grow as a developer.
+            <div class="flex flex-col md:flex-row items-center justify-center md:space-x-8">
+                <!-- Left: Centered Intro Text -->
+                <div class="md:w-2/3 text-center">
+                    <h2 class="text-3xl font-bold text-white mb-6">About Me</h2>
+                    <p class="max-w-3xl mx-auto text-lg leading-relaxed">
+                        I am an aspiring game programmer who likes to apply first principles to
+                        solve complex problems. My journey in game development has been driven
+                        by a love for creating efficient, elegant solutions and a fascination
+                        with programming languages and engines. I enjoy working on projects
+                        that challenge my skills and allow me to learn new technologies and
+                        grow as a developer.
+                    </p>
+                </div>
 
-            </p>
+                <!-- Right: QR-code Frame (unchanged) -->
+                <aside class="mt-8 md:mt-0 md:w-1/3 flex flex-col border-2 border-blue-500 rounded-lg overflow-hidden">
+                    <div class="p-4 bg-gray-900 flex items-center justify-center">
+                        <a href="https://verify.trueoriginal.com/69A053E9-EBF2-F98E-9D63-27B7862F374F/?ref=badge"
+                           target="_blank" rel="noopener noreferrer">
+                            <img src="https://cdn.truecdn.io/cdn/full/qrcode-raw-69A053E9-EBF2-F98E-9D63-27B7862F374F.png?ref=qrcode&key=QZdyOUXdCh"
+                                 alt="TRUE Original Document QRCODE"
+                                 class="w-32 h-32 object-contain" />
+                        </a>
+                    </div>
+                    <div class="p-2 bg-gray-900 text-center">
+                        <p class="text-sm text-gray-400">Verified Diploma Authenticity In .NET</p>
+                    </div>
+                </aside>
+            </div>
         </section>
+
+
 
         <section id="projects">
             <h2 class="text-3xl font-bold text-white mb-10 text-center">Projects</h2>
