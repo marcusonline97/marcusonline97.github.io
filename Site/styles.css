@@ -77,10 +77,10 @@
     justify-content: center;
     gap: 2px;              /* spacing between icon + text */
     border-radius: 5mm;
-    background: rgb(34 , 34, 60);
+    background: rgb(50 , 50, 100);
     border: 1px solid var(--border);
     font-family: poppins;
-    font-size: 16px;
+    font-size: 21px;
     color: white;
     text-decoration: none;
     white-space: nowrap;    /* keeps text on one line */
