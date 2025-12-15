@@ -38,7 +38,7 @@
 .logo {
     width: fit-content;
     font-family: poppins;
-    font-size: 25px;
+    font-size: 22px;
     color: white;
     font-weight: 600;
     padding: 20px;
@@ -64,23 +64,23 @@
     align-items: center;
     justify-content: center;
     white-space: nowrap;   /* ✅ prevents line breaks */
-    gap: 30px;
+    gap: 25px;
     background: rgb(12 , 12, 40);
 
 
 }
 .item {
-    padding: 12px 35px;
+    padding: 9px 22px;
     box-sizing: border-box;
     display: inline-flex;   /* auto-size to content */
     align-items: center;
     justify-content: center;
-    gap: 2px;              /* spacing between icon + text */
-    border-radius: 5mm;
+    gap: 1px;              /* spacing between icon + text */
+    border-radius: 3mm;
     background: rgb(50 , 50, 100);
     border: 1px solid var(--border);
     font-family: poppins;
-    font-size: 21px;
+    font-size: 19px;
     color: white;
     text-decoration: none;
     white-space: nowrap;    /* keeps text on one line */
