@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(() => {
                 emailButton.textContent = "Copied!";
                 setTimeout(() => {
-                    emailButton.textContent = "EmailMe";
+                    emailButton.textContent = "Contact Me";
                 }, 1500);
             })
             .catch(err => {
