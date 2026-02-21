@@ -2,9 +2,178 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="/gamedeveloper.svg">
+    <meta name="darkreader-lock" content="dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SteamWrecked Project Page</title>
+
+    <script type="module" crossorigin src="/Site/MainSite.js"></script>
+    <link rel="stylesheet" href="../Site/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Inter, sans-serif;
+            background: #202020;
+            color: #d1d5db;
+        }
+
+        .glass-panel {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(10, 10, 35, 0.7);
+            box-shadow: 0 0 16px rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+        }
+    </style>
 </head>
 <body>
+    <div id="root">
+        <div class="center">
+            <div class="menu">
+                <input type="checkbox" name="box" id="menu">
+                <label for="menu" class="sr-only">Toggle Menu</label>
+                <div class="logo">
+                    Home
+                    <label for="menu"></label>
+                </div>
+                <div class="items">
+                    <a href="../index.html" class="item">
+                        <img src="../Assets/Images/home-icon-silhouette.png" alt="Home Icon" class="icon">
+                        Home
+                    </a>
+                    <a href="../ProjectPages/MarcusPersson.html" class="item">
+                        <img src="../Assets/Images/user.png" alt="User Icon" class="icon">
+                        About Me
+                    </a>
+                    <a href="../ProjectPages/SteamWrecked.html" class="item">
+                        <img src="../Assets/Images/automaton_concepts/automaton5.png" alt="Automaton Icon" class="icon">
+                        SteamWrecked
+                    </a>
+                    <a href="../ProjectPages/Suboptimal.html" class="item">
+                        <img src="../Assets/Images/SubOptimalLogo.png" alt="Sub Icon" class="icon">
+                        SubOptimal
+                    </a>
+                    <a href="ProjectPages/Plugin.html" class="item">
+                        <img src="../Assets/Images/UEIcon.png" alt="unreal Icon" class="icon">
+                        Plugins
+                    </a>
+                    <a href="https://github.com/marcusonline97" class="item">
+                        <img src="../Assets/Images/Github.png" alt="Github Icon" class="icon">
+                        Github
+                    </a>
+                    <a href="https://www.linkedin.com/in/marcus-persson-31a4bb152/" class="item">
+                        <img src="../Assets/Images/linkedin.png" alt="LinkedIn Icon" class="icon">
+                        LinkedIn
+                    </a>
+                    <a href="#" class="item" id="emailCopyBtn">
+                        <img src="../Assets/Images/mail.png" alt="Contact Icon" class="icon">
+                        Contact Me
+                    </a>
+                    <a href="../Assets/CV/Marcus_CV.pdf" class="item" download>
+                        <img src="../Assets/Images/download.png" alt="Download Icon" class="icon">
+                        CV
+                    </a>
+                    <a href="https://verify.trueoriginal.com/69A053E9-EBF2-F98E-9D63-27B7862F374F/?ref=badge/" class="item">
+                        <img src="../Assets/Images/NET_Core_Logo.png" alt=".Net Icon" class="icon">
+                        .Net Diploma
+                    </a>
 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="max-w-6xl mx-auto px-5 md:px-8 py-10 md:py-14">
+        <header class="text-center mb-8 md:mb-10">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white">SubOptimal</h1>
+            <p class="mt-4 text-base md:text-lg text-gray-300 max-w-3xl mx-auto">
+                A Indie Award Win - A Journey Through Dev Challenges and Triumphs
+            </p>
+        </header>
+
+        <section class="glass-panel rounded-2xl p-5 md:p-8">
+            <div class="grid md:grid-cols-2 gap-6 md:gap-8 items-stretch">
+                <div class="rounded-xl border border-white/20 bg-black/40 min-h-[280px] md:min-h-[340px] p-6 flex flex-col justify-end relative overflow-hidden">
+                    <div class="absolute inset-0 opacity-15">
+                        <img src="../Assets/Images/SubOptimalLogo.png" alt="Suboptimal visual placeholder" class="w-full h-full object-cover">
+                    </div>
+                    <div class="relative z-10">
+                        <p class="uppercase text-xs tracking-[0.2em] text-cyan-300"></p>
+                        <h2 class="mt-2 text-3xl md:text-4xl font-bold text-white">Suboptimal</h2>
+                        <p class="mt-3 text-sm md:text-base text-gray-300">
+                            A deep dive in making a quick multiplayer game in minimal time.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center rounded-xl border border-white/20 bg-black/30 p-6">
+                    <h3 class="text-2xl md:text-3xl font-bold text-white">Project Overview</h3>
+                    <p class="mt-4 text-base leading-relaxed text-gray-300">
+                        Suboptimal is an exploration and cooperation game focused on navigating a difficult to manage submarine and gather sunken treasure chests with a submarine with intentionally difficult controls. It was developed as a school project and is now available on Itch.io and due for release on Steam.
+                    </p>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded bg-blue-900/50 text-cyan-300 text-sm">Unreal Engine</span>
+                        <span class="px-3 py-1 rounded bg-blue-900/50 text-cyan-300 text-sm">C++</span>
+                        <span class="px-3 py-1 rounded bg-purple-500/50 text-purple-200 text-sm">JetBrains Rider</span>
+                        <span class="px-3 py-1 rounded bg-orange-500/50 text-orange-200 text-sm">Perforce</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-8 md:mt-10">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Project Details</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <article class="glass-panel rounded-xl p-4">
+                    <p class="text-xs uppercase tracking-[0.16em] text-gray-400">Length of Project</p>
+                    <p class="mt-2 text-lg font-semibold text-white">5 Weeks</p>
+                </article>
+                <article class="glass-panel rounded-xl p-4">
+                    <p class="text-xs uppercase tracking-[0.16em] text-gray-400">Downloads</p>
+                    <p class="mt-2 text-lg font-semibold text-white">200+ Downloads</p>
+                </article>
+                <article class="glass-panel rounded-xl p-4">
+                    <p class="text-xs uppercase tracking-[0.16em] text-gray-400">Roles</p>
+                    <p class="mt-2 text-lg font-semibold text-white">Physics and Network programmer</p>
+                </article>
+                <article class="glass-panel rounded-xl p-4">
+                    <p class="text-xs uppercase tracking-[0.16em] text-gray-400">Awards</p>
+                    <p class="mt-2 text-lg font-semibold text-white">FutureGame Awards 2026 - Multiplayer</p>
+                </article>
+                <article class="glass-panel rounded-xl p-4">
+                    <p class="text-xs uppercase tracking-[0.16em] text-gray-400">Categories</p>
+                    <p class="mt-2 text-lg font-semibold text-white">Cooperation, Exploration, </p>
+                </article>
+                <article class="glass-panel rounded-xl p-4">
+                    <p class="text-xs uppercase tracking-[0.16em] text-gray-400">Team Size</p>
+                    <p class="mt-2 text-lg font-semibold text-white">17 Developers</p>
+                </article>
+                <article class="glass-panel rounded-xl p-4 sm:col-span-2 lg:col-span-3">
+                    <p class="text-xs uppercase tracking-[0.16em] text-gray-400">Tools / Technologies</p>
+                    <p class="mt-2 text-lg font-semibold text-white">Unreal Engine 5, C++, JetBrains Rider, Perforce, Miro, Discord</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="mt-8 md:mt-10">
+            <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                <a href="https://futuregames.itch.io/steamwrecked" target="_blank" rel="noopener noreferrer"
+                   class="inline-block px-8 py-4 border border-cyan-300 text-cyan-300 rounded-md text-sm font-semibold hover:bg-cyan-300 hover:text-black transition">
+                    View on itch.io
+                </a>
+                <a href="https://store.steampowered.com/app/4089910/Steamwrecked/" target="_blank" rel="noopener noreferrer"
+                   class="inline-block px-8 py-4 border border-cyan-300 text-cyan-300 rounded-md text-sm font-semibold hover:bg-cyan-300 hover:text-black transition">
+                    View Steam Page
+                </a>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
