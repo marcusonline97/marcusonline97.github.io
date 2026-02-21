@@ -36,44 +36,57 @@
 <body>
     <div id="root">
         <div class="center">
-            <a href="../index.html" class="item">
-                <img src="../Assets/Images/home-icon-silhouette.png" alt="Home Icon" class="icon" />
-                Home
-            </a>
-            <a href="../ProjectPages/MarcusPersson.html" class="item" aria-current="page">
-                <img src="../Assets/Images/user.png" alt="User Icon" class="icon" />
-                About Me
-            </a>
-            <a href="../ProjectPages/SteamWrecked.html" class="item">
-                <img src="../Assets/Images/automaton_concepts/automaton5.png" alt="Automaton Icon" class="icon" />
-                SteamWrecked
-            </a>
+            <div class="menu">
+                <input type="checkbox" name="box" id="menu">
+                <label for="menu" class="sr-only">Toggle Menu</label>
+                <div class="logo">
+                    Home
+                    <label for="menu"></label>
+                </div>
+                <div class="items">
+                    <a href="../index.html" class="item">
+                        <img src="../Assets/Images/home-icon-silhouette.png" alt="Home Icon" class="icon">
+                        Home
+                    </a>
+                    <a href="../ProjectPages/MarcusPersson.html" class="item" aria-current="page">
+                        <img src="../Assets/Images/user.png" alt="User Icon" class="icon">
+                        About Me
+                    </a>
+                    <a href="../ProjectPages/SteamWrecked.html" class="item">
+                        <img src="../Assets/Images/automaton_concepts/automaton5.png" alt="Automaton Icon" class="icon">
+                        SteamWrecked
+                    </a>
+                    <a href="../ProjectPages/SubOptimal.html" class="item">
+                        <img src="../Assets/Images/SubOptimalLogo.png" alt="Sub Icon" class="icon">
+                        SubOptimal
+                    </a>
+                    <a href="../ProjectPages/Plugin.html" class="item">
+                        <img src="../Assets/Images/UEIcon.png" alt="unreal Icon" class="icon">
+                        Plugins
+                    </a>
+                    <a href="https://github.com/marcusonline97" class="item">
+                        <img src="../Assets/Images/Github.png" alt="Github Icon" class="icon">
+                        Github
+                    </a>
+                    <a href="https://www.linkedin.com/in/marcus-persson-31a4bb152/" class="item">
+                        <img src="../Assets/Images/linkedin.png" alt="LinkedIn Icon" class="icon">
+                        LinkedIn
+                    </a>
+                    <a href="#" class="item" id="emailCopyBtn">
+                        <img src="../Assets/Images/mail.png" alt="Contact Icon" class="icon">
+                        Contact Me
+                    </a>
+                    <a href="../Assets/CV/Marcus_CV.pdf" class="item" download>
+                        <img src="../Assets/Images/download.png" alt="Download Icon" class="icon">
+                        CV
+                    </a>
+                    <a href="https://verify.trueoriginal.com/69A053E9-EBF2-F98E-9D63-27B7862F374F/?ref=badge/" class="item">
+                        <img src="../Assets/Images/NET_Core_Logo.png" alt=".Net Icon" class="icon">
+                        .Net Diploma
+                    </a>
+                </div>
+            </div>
 
-            <a href="../ProjectPages/SubOptimal.html" class="item">
-                <img src="../Assets/Images/SubOptimalLogo.png" alt="Sub Icon" class="icon" />
-                SubOptimal
-            </a>
-            <a href="../ProjectPages/Plugin.html" class="item">
-                <img src="../Assets/Images/UEIcon.png" alt="unreal Icon" class="icon" />
-                Plugins
-            </a>
-            <a href="https://github.com/marcusonline97" class="item" target="_blank" rel="noopener noreferrer">
-                <img src="../Assets/Images/Github.png" alt="Home Icon" class="icon" />
-                Github
-            </a>
-            <a href="https://www.linkedin.com/in/marcus-persson-31a4bb152/" class="item" target="_blank" rel="noopener noreferrer">
-                <img src="../Assets/Images/linkedin.png" alt="Home Icon" class="icon" />
-                LinkedIn
-            </a>
-
-            <a href="../Assets/CV/Marcus_CV.pdf" class="item" download>
-                <img src="../Assets/Images/download.png" alt="Download Icon" class="icon" />
-                CV
-            </a>
-            <a href="https://verify.trueoriginal.com/69A053E9-EBF2-F98E-9D63-27B7862F374F/?ref=badge/" class="item" target="_blank" rel="noopener noreferrer">
-                <img src="../Assets/Images/NET_Core_Logo.png" alt=".Net Icon" class="icon" />
-                .Net Diploma
-            </a>
         </div>
     </div>
     <main class="max-w-7xl mx-auto px-5 md:px-8 py-10 md:py-14">
