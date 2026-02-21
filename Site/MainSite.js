@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     const emailButton = document.getElementById("emailCopyBtn");
+    if (!emailButton) {
+        return;
+    }
 
     emailButton.addEventListener("click", (e) => {
         e.preventDefault();
