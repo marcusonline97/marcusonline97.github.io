@@ -2,9 +2,168 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="/gamedeveloper.svg">
+    <meta name="darkreader-lock" content="dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plugins | Marcus Persson</title>
+
+    <script type="module" crossorigin src="/Site/MainSite.js"></script>
+    <link rel="stylesheet" href="../Site/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Inter, sans-serif;
+            background: #202020;
+            color: #d1d5db;
+        }
+
+        .glass-panel {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(10, 10, 35, 0.7);
+            box-shadow: 0 0 16px rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+        }
+    </style>
 </head>
 <body>
+    <div id="root">
+        <div class="center">
+            <div class="menu">
+                <input type="checkbox" name="box" id="menu">
+                <label for="menu" class="sr-only">Toggle Menu</label>
+                <div class="logo">
+                    Home
+                    <label for="menu"></label>
+                </div>
+                <div class="items">
+                    <a href="../index.html" class="item">
+                        <img src="../Assets/Images/home-icon-silhouette.png" alt="Home Icon" class="icon">
+                        Home
+                    </a>
+                    <a href="../Site/MarcusPersson.html" class="item">
+                        <img src="../Assets/Images/user.png" alt="User Icon" class="icon">
+                        About Me
+                    </a>
+                    <a href="../ProjectPages/SteamWrecked.html" class="item">
+                        <img src="../Assets/Images/automaton_concepts/automaton5.png" alt="SteamWrecked Icon" class="icon">
+                        SteamWrecked
+                    </a>
+                    <a href="../ProjectPages/SubOptimal.html" class="item">
+                        <img src="../Assets/Images/SubOptimalLogo.png" alt="SubOptimal Icon" class="icon">
+                        SubOptimal
+                    </a>
+                    <a href="../ProjectPages/plugin.html" class="item" aria-current="page">
+                        <img src="../Assets/Images/UEIcon.png" alt="Plugin Icon" class="icon">
+                        Plugins
+                    </a>
+                    <a href="https://github.com/marcusonline97" class="item" target="_blank" rel="noopener noreferrer">
+                        <img src="../Assets/Images/Github.png" alt="Github Icon" class="icon">
+                        Github
+                    </a>
+                    <a href="https://www.linkedin.com/in/marcus-persson-31a4bb152/" class="item" target="_blank" rel="noopener noreferrer">
+                        <img src="../Assets/Images/linkedin.png" alt="LinkedIn Icon" class="icon">
+                        LinkedIn
+                    </a>
+                    <a href="#" class="item" id="emailCopyBtn">
+                        <img src="../Assets/Images/mail.png" alt="Contact Icon" class="icon">
+                        Contact Me
+                    </a>
+                    <a href="../Assets/CV/Marcus_CV.pdf" class="item" download>
+                        <img src="../Assets/Images/download.png" alt="Download Icon" class="icon">
+                        CV
+                    </a>
+                    <a href="https://verify.trueoriginal.com/69A053E9-EBF2-F98E-9D63-27B7862F374F/?ref=badge/" class="item" target="_blank" rel="noopener noreferrer">
+                        <img src="../Assets/Images/NET_Core_Logo.png" alt=".Net Icon" class="icon">
+                        .Net Diploma
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <main class="max-w-7xl mx-auto px-5 md:px-8 py-10 md:py-14">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white">Featured Plugins</h1>
+            <p class="mt-4 text-base md:text-lg text-gray-300 max-w-3xl mx-auto">
+                A collection of Unreal Engine plugins that i developed to speed up production workflows,
+                improve reusability, extend with custom blueprints and make gameplay systems easier to iterate on.
+            </p>
+        </header>
+
+        <section class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+            <article class="glass-panel rounded-2xl p-6 flex flex-col">
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="../Assets/Images/UEIcon.png" alt="Unreal Engine icon" class="w-9 h-9">
+                    <span class="text-sm text-cyan-300">Unreal Engine 5</span>
+                </div>
+                <h2 class="text-2xl font-bold text-white">Bug Reporter</h2>
+                <p class="mt-3 text-gray-300 flex-grow">
+                    A custom editor button plugin that captures a screenshot of a users current viewport, gathers engine logs and a title of the bug and description of how to reproduce it.
+                    Then zips it up the relevant information and sends it to a remote google drive folder.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <span class="px-3 py-1 rounded bg-blue-900/50 text-cyan-300 text-sm">C++</span>
+                    <span class="px-3 py-1 rounded bg-blue-900/50 text-cyan-300 text-sm">Editor Tool</span>
+                    <span class="px-3 py-1 rounded bg-purple-500/50 text-purple-200 text-sm">Exporting Data</span>
+                </div>
+            </article>
+
+            <article class="glass-panel rounded-2xl p-6 flex flex-col">
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="../Assets/Images/UEIcon.png" alt="Unreal Engine icon" class="w-9 h-9">
+                    <span class="text-sm text-cyan-300">Unreal Engine 5</span>
+                </div>
+                <h2 class="text-2xl font-bold text-white">Epic Online Services Plugin</h2>
+                <p class="mt-3 text-gray-300 flex-grow">
+                    A very early stage plugin that integrates Epic Online Services into Unreal Engine and identifies the users platform and allows for crossplatform connections on a server.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <span class="px-3 py-1 rounded bg-blue-900/50 text-cyan-300 text-sm">C++</span>
+                    <span class="px-3 py-1 rounded bg-orange-500/50 text-orange-200 text-sm">Online Subsystem</span>
+                    <span class="px-3 py-1 rounded bg-purple-500/50 text-purple-200 text-sm">Crossplatform</span>
+                </div>
+            </article>
+
+            <article class="glass-panel rounded-2xl p-6 flex flex-col">
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="../Assets/Images/UEIcon.png" alt="Unreal Engine icon" class="w-9 h-9">
+                    <span class="text-sm text-cyan-300">Unreal Engine 5</span>
+                </div>
+                <h2 class="text-2xl font-bold text-white">Custom Linetrace with Gameplay Tag</h2>
+                <p class="mt-3 text-gray-300 flex-grow">
+                    To extend the functionality of the default linetrace system in Unreal Engine, i created this in order to work more directly with gameplay tags and that allows for more precise filtering of trace results and helps working with more data driven approaches when it comes to hit detection and interactions in the world.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <span class="px-3 py-1 rounded bg-blue-900/50 text-cyan-300 text-sm">C++</span>
+                    <span class="px-3 py-1 rounded bg-blue-900/50 text-cyan-300 text-sm">Gameplay Tags</span>
+                    <span class="px-3 py-1 rounded bg-purple-500/50 text-purple-200 text-sm">Blueprints</span>
+                    <span class="px-3 py-1 rounded bg-purple-500/50 text-purple-200 text-sm">Plugins</span>
+                </div>
+            </article>
+            <article class="glass-panel rounded-2xl p-6 flex flex-col">
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="../Assets/Images/UEIcon.png" alt="Unreal Engine icon" class="w-9 h-9">
+                    <span class="text-sm text-cyan-300">Unreal Engine 5</span>
+                </div>
+                <h2 class="text-2xl font-bold text-white">Asynchronous loading</h2>
+                <p class="mt-3 text-gray-300 flex-grow">
+                    A custom node that  i developed in order to asynchronously load object references in Unreal Engine.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <span class="px-3 py-1 rounded bg-blue-900/50 text-cyan-300 text-sm">C++</span>
+                    <span class="px-3 py-1 rounded bg-blue-900/50 text-cyan-300 text-sm">Async</span>
+                    <span class="px-3 py-1 rounded bg-purple-500/50 text-purple-200 text-sm">Blueprints</span>
+                </div>
+            </article>
+        </section>
+    </main>
 </body>
 </html>

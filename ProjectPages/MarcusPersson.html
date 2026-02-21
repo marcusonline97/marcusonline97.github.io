@@ -2,9 +2,269 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="/gamedeveloper.svg">
+
+    <meta name="darkreader-lock" content="dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Marcus Persson</title>
+
+    <script type="module" crossorigin src="/Site/MainSite.js"></script>
+    <link rel="stylesheet" href="../Site/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Inter, sans-serif;
+            background: #202020;
+            color: #d1d5db;
+        }
+
+        .glass-panel {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(10, 10, 35, 0.72);
+            box-shadow: 0 0 16px rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(8px);
+        }
+    </style>
 </head>
 <body>
+    <div id="root">
+        <div class="center">
+            <a href="../index.html" class="item">
+                <img src="../Assets/Images/home-icon-silhouette.png" alt="Home Icon" class="icon" />
+                Home
+            </a>
+                <a href="../ProjectPages/MarcusPersson.html" class="item" aria-current="page">
+                    <img src="../Assets/Images/user.png" alt="User Icon" class="icon" />
+                    About Me
+                </a>
+                    <a href="../ProjectPages/SteamWrecked.html" class="item">
+                        <img src="../Assets/Images/automaton_concepts/automaton5.png" alt="Automaton Icon" class="icon" />
+                        SteamWrecked
+                    </a>
 
+                        <a href="../ProjectPages/SubOptimal.html" class="item">
+                            <img src="../Assets/Images/SubOptimalLogo.png" alt="Sub Icon" class="icon" />
+                            SubOptimal
+                        </a>
+                            <a href="../ProjectPages/plugin.html" class="item">
+                                <img src="../Assets/Images/UEIcon.png" alt="unreal Icon" class="icon" />
+                                Plugins
+                            </a>
+                            <a href="https://github.com/marcusonline97" class="item" target="_blank" rel="noopener noreferrer">
+                                <img src="../Assets/Images/Github.png" alt="Home Icon" class="icon" />
+                                Github
+                            </a>
+                                <a href="https://www.linkedin.com/in/marcus-persson-31a4bb152/" class="item" target="_blank" rel="noopener noreferrer">
+                                    <img src="../Assets/Images/linkedin.png" alt="Home Icon" class="icon" />
+                                    LinkedIn
+                                </a>
+
+                                <a href="../Assets/CV/Marcus_CV.pdf" class="item" download>
+                                    <img src="../Assets/Images/download.png" alt="Download Icon" class="icon" />
+                                    CV
+                                </a>
+                                    <a href="https://verify.trueoriginal.com/69A053E9-EBF2-F98E-9D63-27B7862F374F/?ref=badge/" class="item" target="_blank" rel="noopener noreferrer">
+                                        <img src="../Assets/Images/NET_Core_Logo.png" alt=".Net Icon" class="icon" />
+                                        .Net Diploma
+                                    </a>
+                                    </div>
+    </div>
+    <main class="max-w-7xl mx-auto px-5 md:px-8 py-10 md:py-14">
+        <section class="glass-panel rounded-2xl p-6 md:p-10">
+            <div class="grid lg:grid-cols-5 gap-8 items-center">
+                <div class="lg:col-span-3 text-left">
+                    <p class="uppercase tracking-[0.18em] text-cyan-300 text-xs md:text-sm">About Me</p>
+                    <h1 class="mt-3 text-4xl md:text-5xl font-extrabold text-white leading-tight">
+                        Marcus Persson
+                    </h1>
+                    <p class="mt-3 text-lg md:text-xl text-gray-300">
+                        Gameplay, AI, and Network Programmer focused on building responsive systems in Unreal Engine.
+                    </p>
+                    <p class="mt-5 text-base leading-relaxed text-gray-300 max-w-3xl">
+                        I enjoy creating game systems that feel smooth for players and clear for teams to maintain.
+                        Most of my work is in C++ and Unreal Engine, where I focus on gameplay architecture,
+                        multiplayer implementation, AI behavior, and practical production tooling.
+                    </p>
+                    <div class="mt-7 flex flex-wrap gap-3">
+                        <a href="../Assets/CV/Marcus_CV.pdf" download
+                           class="inline-block px-6 py-3 border border-cyan-300 text-cyan-300 rounded-md text-sm font-semibold hover:bg-cyan-300 hover:text-black transition">
+                            Download CV
+                        </a>
+                        <a href="../ProjectPages/plugin.html"
+                           class="inline-block px-6 py-3 border border-cyan-300 text-cyan-300 rounded-md text-sm font-semibold hover:bg-cyan-300 hover:text-black transition">
+                            View Plugins
+                        </a>
+                        <a href="../ProjectPages/SteamWrecked.html"
+                           class="inline-block px-6 py-3 border border-cyan-300 text-cyan-300 rounded-md text-sm font-semibold hover:bg-cyan-300 hover:text-black transition">
+                            View Projects
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <div class="rounded-2xl overflow-hidden border border-white/20 bg-black/30">
+                        <img src="../Assets/Images/Marcus.jpg" alt="Marcus Persson portrait" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <article class="glass-panel rounded-xl p-5 text-left">
+                <p class="text-xs uppercase tracking-[0.16em] text-gray-400">Focus</p>
+                <p class="mt-2 text-lg font-semibold text-white">Gameplay and Systems</p>
+            </article>
+            <article class="glass-panel rounded-xl p-5 text-left">
+                <p class="text-xs uppercase tracking-[0.16em] text-gray-400">Primary Stack</p>
+                <p class="mt-2 text-lg font-semibold text-white">Unreal Engine + C++</p>
+            </article>
+            <article class="glass-panel rounded-xl p-5 text-left">
+                <p class="text-xs uppercase tracking-[0.16em] text-gray-400">Award Highlight</p>
+                <p class="mt-2 text-lg font-semibold text-white">Swedish Game Awards 2025</p>
+            </article>
+            <article class="glass-panel rounded-xl p-5 text-left">
+                <p class="text-xs uppercase tracking-[0.16em] text-gray-400">Role Scope</p>
+                <p class="mt-2 text-lg font-semibold text-white">AI, Networking, Data driven programming</p>
+            </article>
+        </section>
+
+        <section class="mt-10 grid lg:grid-cols-2 gap-6">
+            <article class="glass-panel rounded-2xl p-6 text-left">
+                <h2 class="text-2xl md:text-3xl font-bold text-white">My Story</h2>
+                <p class="mt-4 text-gray-300 leading-relaxed">
+                    I have always liked solving complex technical problems, especially when the solution improves how a game feels.
+                    Over time, that interest turned into a strong focus on systems design and technical gameplay implementation.
+                </p>
+                <p class="mt-4 text-gray-300 leading-relaxed">
+                    I am comfortable working both independently and in cross-discipline teams. On team projects, I care a lot about
+                    communication, iteration speed, and keeping systems readable so other developers can contribute quickly.
+                </p>
+                <p class="mt-4 text-gray-300 leading-relaxed">
+                    Outside production work, I also build engine-level experiments and plugins to sharpen my technical foundations.
+                    I like turning repeated workflow pain points into reusable tools.
+                </p>
+            </article>
+
+            <article class="glass-panel rounded-2xl p-6 text-left">
+                <h2 class="text-2xl md:text-3xl font-bold text-white">What I Bring to a Team</h2>
+                <ul class="mt-4 space-y-3 text-gray-300">
+                    <li class="flex gap-3">
+                        <span class="text-cyan-300">-</span>
+                        <span>Solid C++ and Unreal Engine implementation for gameplay features and reusable systems.</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="text-cyan-300">-</span>
+                        <span>Strong understanding of multiplayer/session flow and practical network gameplay concerns.</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="text-cyan-300">-</span>
+                        <span>Experience with AI behavior iteration, debugging, and playtest-driven improvements.</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="text-cyan-300">-</span>
+                        <span>Production awareness from QA and bug-fix workflows in collaborative projects.</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="text-cyan-300">-</span>
+                        <span>Clear communication, ownership, and a consistent focus on team velocity.</span>
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="mt-10">
+            <h2 class="text-3xl font-bold text-white text-left mb-5">Core Skills</h2>
+            <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
+                <article class="glass-panel rounded-xl p-5 text-left">
+                    <h3 class="text-xl font-semibold text-white">Gameplay Programming</h3>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded bg-blue-900/50 text-cyan-300 text-sm">C++</span>
+                        <span class="px-3 py-1 rounded bg-blue-900/50 text-cyan-300 text-sm">Blueprinting</span>
+                        <span class="px-3 py-1 rounded bg-blue-900/50 text-cyan-300 text-sm">GameplayTags</span>
+                    </div>
+                </article>
+                <article class="glass-panel rounded-xl p-5 text-left">
+                    <h3 class="text-xl font-semibold text-white">AI and Systems</h3>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded bg-purple-500/50 text-purple-200 text-sm">Behavior Trees</span>
+                        <span class="px-3 py-1 rounded bg-purple-500/50 text-purple-200 text-sm">Debugging</span>
+                        <span class="px-3 py-1 rounded bg-purple-500/50 text-purple-200 text-sm">Plugins</span>
+                    </div>
+                </article>
+                <article class="glass-panel rounded-xl p-5 text-left">
+                    <h3 class="text-xl font-semibold text-white">Multiplayer</h3>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded bg-orange-500/50 text-orange-200 text-sm">Networking</span>
+                        <span class="px-3 py-1 rounded bg-orange-500/50 text-orange-200 text-sm">EpicOnlineServices</span>
+                        <span class="px-3 py-1 rounded bg-orange-500/50 text-orange-200 text-sm">NetDrivers</span>
+                        <span class="px-3 py-1 rounded bg-orange-500/50 text-orange-200 text-sm">DedicatedServers</span>
+                        <span class="px-3 py-1 rounded bg-orange-500/50 text-orange-200 text-sm">Steamworks</span>
+
+                    </div>
+                </article>
+                <article class="glass-panel rounded-xl p-5 text-left">
+                    <h3 class="text-xl font-semibold text-white">Tools and Workflow</h3>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded bg-blue-900/50 text-cyan-300 text-sm">Rider</span>
+                        <span class="px-3 py-1 rounded bg-blue-900/50 text-cyan-300 text-sm">Perforce</span>
+                        <span class="px-3 py-1 rounded bg-blue-900/50 text-cyan-300 text-sm">Miro</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="mt-10">
+            <h2 class="text-3xl font-bold text-white text-left mb-5">Experience Highlights</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <article class="glass-panel rounded-xl p-5 text-left">
+                    <p class="text-xs uppercase tracking-[0.16em] text-gray-400">SteamWrecked</p>
+                    <p class="mt-2 text-lg font-semibold text-white">Award-winning team project and successful Steam release</p>
+                    <p class="mt-2 text-gray-300">Contributed in AI programming, QA testing, and managing the developement of the live product.</p>
+                </article>
+                <article class="glass-panel rounded-xl p-5 text-left">
+                    <p class="text-xs uppercase tracking-[0.16em] text-gray-400">SubOptimal</p>
+                    <p class="mt-2 text-lg font-semibold text-white">Enhanced Multiplayer Development</p>
+                    <p class="mt-2 text-gray-300">Worked on networking and physics systems while maintaining iterative gameplay improvements.</p>
+                </article>
+                <article class="glass-panel rounded-xl p-5 text-left">
+                    <p class="text-xs uppercase tracking-[0.16em] text-gray-400">Engine and Plugin Work</p>
+                    <p class="mt-2 text-lg font-semibold text-white">Reusable tooling and useful systems</p>
+                    <p class="mt-2 text-gray-300">Worked on developing systems and plugins based on my teams needs for group and personal projects</p>
+                </article>
+                <article class="glass-panel rounded-xl p-5 text-left">
+                    <p class="text-xs uppercase tracking-[0.16em] text-gray-400">Mentoring</p>
+                    <p class="mt-2 text-lg font-semibold text-white">Teaching through Kodcentrum</p>
+                    <p class="mt-2 text-gray-300">Volonteered at teaching kids how to code in scratch and Python, tutoring programming fundamentals through beginner-friendly projects.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="mt-10 glass-panel rounded-2xl p-7 text-center">
+            <h2 class="text-3xl font-bold text-white">Let's Build Something Great</h2>
+            <p class="mt-3 text-gray-300 max-w-3xl mx-auto">
+                I am always interested in discussing game programming opportunities, collaborations, and technical challenges.
+                Feel free to reach out if you want to work together.
+            </p>
+            <div class="mt-6 flex flex-wrap justify-center gap-3">
+                <a href="mailto:mjpersson97@gmail.com"
+                   class="inline-block px-6 py-3 border border-cyan-300 text-cyan-300 rounded-md text-sm font-semibold hover:bg-cyan-300 hover:text-black transition">
+                    Email Me
+                </a>
+                <a href="https://www.linkedin.com/in/marcus-persson-31a4bb152/" target="_blank" rel="noopener noreferrer"
+                   class="inline-block px-6 py-3 border border-cyan-300 text-cyan-300 rounded-md text-sm font-semibold hover:bg-cyan-300 hover:text-black transition">
+                    Connect on LinkedIn
+                </a>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
+
