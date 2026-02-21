@@ -12,25 +12,36 @@
     <script type="module" crossorigin src="/Site/MainSite.js"></script>
     <link rel="stylesheet" href="Site/styles.css">
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #202020;
+            color: #d1d5db;
+        }
+    </style>
 </head>
 <body>
 <div id="root">
     <div class="center">
-        <div class="menu">
+        <nav class="menu" aria-label="Primary navigation">
             <input type="checkbox" name="box" id="menu" />
 
             <label for="menu" class="sr-only">Toggle Menu</label>
             <div class="logo">
-                Home 
+                Home
                 <label for="menu"></label>
             </div>
             <div class="items">
-                <a href="index.html" class="item">
+                <a href="index.html" class="item" aria-current="page">
                     <img src="Assets/Images/home-icon-silhouette.png" alt="Home Icon" class="icon" />
                     Home
                 </a>
@@ -38,20 +49,24 @@
                     <img src="Assets/Images/user.png" alt="User Icon" class="icon" />
                     About Me
                 </a>
-                <a href="Site/SteamWrecked.html" class="item">
+                <a href="ProjectPages/SteamWrecked.html" class="item">
                     <img src="Assets/Images/automaton_concepts/automaton5.png" alt="Automaton Icon" class="icon" />
                     SteamWrecked
                 </a>
-                
-                <a href="Site/Suboptimal.html" class="item">
+
+                <a href="ProjectPages/Suboptimal.html" class="item">
                     <img src="Assets/Images/SubOptimalLogo.png" alt="Sub Icon" class="icon" />
                     SubOptimal
                 </a>
-                <a href="https://github.com/marcusonline97" class="item">
+                <a href="ProjectPages/Plugins" class="item">
+                    <img src="Assets/Images/UEIcon.png" alt="unreal Icon" class="icon">
+                    Plugins
+                </a>
+                <a href="https://github.com/marcusonline97" class="item" target="_blank" rel="noopener noreferrer">
                     <img src="Assets/Images/Github.png" alt="Home Icon" class="icon" />
                     Github
                 </a>
-                <a href="https://www.linkedin.com/in/marcus-persson-31a4bb152/" class="item">
+                <a href="https://www.linkedin.com/in/marcus-persson-31a4bb152/" class="item" target="_blank" rel="noopener noreferrer">
                     <img src="Assets/Images/linkedin.png" alt="Home Icon" class="icon" />
                     LinkedIn
                 </a>
@@ -69,96 +84,82 @@
                     .Net Diploma
                 </a>
             </div>
-        </div>
+    </div>
     </div>
 </div>
-<section id="Updated Project">
+<section id="updated-project">
     <div class="mt-6 flex justify-center mb-12">
         <div class="border border-white/40 rounded-2xl px-2 py-1 bg-white/10 backdrop-blur-sm">
             <h3 class="text-4xl font-bold text-white mt-2 mb-2 text-center">
-            Swedish Game Award Winner 2025
+                Swedish Game Award Winner 2025
             </h3>
         </div>
-</div>
+    </div>
     <div class="w-full max-w-[1500px] mx-auto">
-            <div class="glass-effect inner-border bg-black/30 shadow-[0_0_10px_rgba(255,255,255,0.1)]
-                rounded-xl overflow-hidden flex flex-col md:flex-row w-full max-w-[1100] mx-auto
+        <div class="glass-effect inner-border bg-black/30 shadow-[0_0_10px_rgba(255,255,255,0.1)]
+                rounded-xl overflow-hidden flex flex-col md:flex-row w-full max-w-[1100px] mx-auto
                 transform hover:-translate-y-2 transition-transform duration-300">
 
-                <!-- Left: Large Image with overlay -->
-                <div class="relative md:w-1/2 w-25 h-50 md:h-auto">
-                    <img src="Assets/Images/SteamWrecked.png"
-                         alt="SteamWrecked"
-                         class="w-full h-full object-cover">
+            <!-- Left: Large Image with overlay -->
+            <div class="relative md:w-1/2 w-25 h-50 md:h-auto">
+                <img src="Assets/Images/SteamWrecked.png"
+                     alt="SteamWrecked"
+                     class="w-full h-full object-cover">
 
-                    <img src="Assets/Images/GAMERSCHOICEWINblackBG.png"
-                         alt="Award Overlay"
-                         class="absolute inset-0 w-full h-full object-cover opacity-80 pointer-events-none">
+                <img src="Assets/Images/GAMERSCHOICEWINblackBG.png"
+                     alt="Award Overlay"
+                     class="absolute inset-0 w-full h-full object-cover opacity-80 pointer-events-none">
+            </div>
+
+            <!-- Right: Content -->
+            <div class="md:w-1/2 w-full p-10 flex flex-col justify-center">
+                <h3 class="text-5xl font-bold text-white mb-4">SteamWrecked</h3>
+
+                <p class="text-lg mb-6 leading-relaxed">
+                    A Steampunk survival game set in a devastated world where you must explore to survive the harsh desert conditions of this steampunk driven world.
+                    In this project my responsibility was mainly around developing the AI in the game and extensive QA Testing and bugfixing.
+                    This project ended up winning the <strong>Gamer's Choice Award</strong> at the Swedish Game Awards 2025 and
+                    was also honorably nominated for <strong>Best Technology</strong>.
+                </p>
+
+                <!-- Tech Tags -->
+                <div class="flex flex-wrap gap-3 mb-6">
+                    <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-3 py-1.5 rounded inline-flex items-center gap-2">
+                        <img src="Assets/Images/UEIcon.png" alt="UnrealEngine" class="w-8 h-8"> Unreal Engine
+                    </span>
+                    <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-3 py-1.5 rounded inline-flex items-center gap-2">
+                        <img src="Assets/Images/C++.png" alt="C++" class="w-8 h-8"> C++
+                    </span>
+                    <span class="bg-purple-500/50 text-purple-200 text-sm font-medium px-3 py-1.5 rounded inline-flex items-center gap-2">
+                        <img src="Assets/Images/RiderIcon.png" alt="Jetbrains" class="w-8 h-8"> JetBrains Rider
+                    </span>
+                    <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-3 py-1.5 rounded inline-flex items-center gap-2">
+                        <img src="Assets/Images/Miro.png" alt="Miro" class="w-8 h-8"> Miro
+                    </span>
+                    <span class="bg-orange-500/50 text-purple-200 text-sm font-medium px-3 py-1.5 rounded inline-flex items-center gap-2">
+                        <img src="Assets/Images/Perforce.png" alt="Perforce" class="w-8 h-8"> Perforce
+                    </span>
                 </div>
 
-                <!-- Right: Content -->
-                <div class="md:w-1/2 w-full p-10 flex flex-col justify-center">
-                    <h3 class="text-5xl font-bold text-white mb-4">SteamWrecked</h3>
-
-                    <p class="text-lg mb-6 leading-relaxed">
-                        A Steampunk survival game set in a devastated world where you must explore to survive the harsh desert conditions of this steampunk driven world.
-                        In this project my responsibility was mainly around developing the AI in the game and extensive QA Testing and bugfixing.
-                        This project ended up winning the <strong>Gamer's Choice Award</strong> at the Swedish Game Awards 2025 and
-                        was also honorably nominated for <strong>Best Technology</strong>.
-                    </p>
-
-                    <!-- Tech Tags -->
-                    <div class="flex flex-wrap gap-3 mb-6">
-                <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-3 py-1.5 rounded inline-flex items-center gap-2">
-                    <img src="Assets/Images/UEIcon.png" alt="UnrealEngine" class="w-8 h-8"> Unreal Engine
-                </span>
-                        <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-3 py-1.5 rounded inline-flex items-center gap-2">
-                    <img src="Assets/Images/C++.png" alt="C++" class="w-8 h-8"> C++
-                </span>
-                        <span class="bg-purple-500/50 text-purple-200 text-sm font-medium px-3 py-1.5 rounded inline-flex items-center gap-2">
-                    <img src="Assets/Images/RiderIcon.png" alt="Jetbrains" class="w-8 h-8"> JetBrains Rider
-                </span>
-                        <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-3 py-1.5 rounded inline-flex items-center gap-2">
-                    <img src="Assets/Images/Miro.png" alt="Miro" class="w-8 h-8"> Miro
-                </span>
-                        <span class="bg-orange-500/50 text-purple-200 text-sm font-medium px-3 py-1.5 rounded inline-flex items-center gap-2">
-                    <img src="Assets/Images/Perforce.png" alt="Perforce" class="w-8 h-8"> Perforce
-                </span>
-                    </div>
-
-                    <!-- Buttons -->
-                    <div class="flex flex-wrap gap-4">
-                        <a href="https://futuregames.itch.io/steamwrecked"
-                           class="inline-block px-14 py-6 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
-                            View Demo
-                        </a>
-                        <a href="https://www.youtube.com/watch?v=iSs5963gCWk"
-                           class="inline-block px-14 py-6 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
-                            Steam Page
-                        </a>
-                        <a href="https://www.youtube.com/watch?v=iSs5963gCWk"
-                           class="inline-block px-14 py-6 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
-                            View Trailer
-                        </a>
-                    </div>
+                <!-- Buttons -->
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://futuregames.itch.io/steamwrecked"
+                       class="inline-block px-14 py-6 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
+                        View Demo
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=iSs5963gCWk"
+                       class="inline-block px-14 py-6 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
+                        Steam Page
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=iSs5963gCWk"
+                       class="inline-block px-14 py-6 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
+                        View Trailer
+                    </a>
                 </div>
             </div>
         </div>
+    </div>
 </section>
-</body>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #202020;
-            color: #d1d5db;
-        }
-        
-    </style>
-<!-- </head> -->
 <section id="projects" class="mt-20">
     <div class="mt-12 flex justify-center mb-12">
         <div class="border border-white/40 rounded-2xl px-2 py-1 bg-white/10 backdrop-blur-sm">
@@ -168,340 +169,344 @@
         </div>
     </div>
 </section>
-<section id="Additional Projects" class="mt-20">
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-10xl mx-auto justify-items-center">
-                <div class="w-full max-w-[600px]">
-                    <div class="glass-effect rounded-lg overflow-hidden inner-border bg-black/30 shadow-[0_0_15px_rgba(255,255,255,0.25)] group transform hover:-translate-y-2 transition-transform duration-300 h-full flex flex-col">
-                        <img src="Assets/Images/SubOptimal.png" alt="Rock Paper Scissor" class="w-full h-56 object-cover">
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-bold text-white mb-2">SubOptimal</h3>
-                            <p class="mb-4">SUBOPTIMAL is a co-op adventure where you and your crew pilot a submarine with intentionally bad controls which makes for a fun and silly friend slop game.
-                                With this project we won three categories at GameTown out of five.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/UEIcon.png" alt="Unreal Logo" class="w-6 h-6">
-                                Unreal Engine
-                            </span>
-                                <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/C++.png" alt="C++" class="w-6 h-6">
-                                C++
-                            </span>
-                                <span class="bg-purple-500/50 text-purple-200 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/RiderIcon.png" alt="RiderLogo" class="w-6 h-6">
-                                JetBrains Rider
-                            </span>
-                                <span class="bg-yellow-300 text-purple-500 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/Miro.png" alt="Miro Logo" class="w-6 h-6">
-                                Miro
-                            </span>
-                                <span class="bg-orange-500/50 text-purple-200 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/Perforce.png" alt="Perforce Logo" class="w-6 h-6">
-                                Perforce
-                            </span>
-                            </div>
-                            <div class="flex space-x-4">
-                                <a href="https://futuregames.itch.io/suboptimal#:~:text=Suboptimal%20is%20a%20low%20poly%204-player%20online%20co-op,teamwork%20and%20coordination%20to%20navigate%20obstacles%20and%20survive." target="_blank" rel="noopener noreferrer"
-                                   class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
-                                    View Demo
-                                </a>
-                                <a href="https://store.steampowered.com/app/4162130/SUBOPTIMAL/" target="_blank" rel="noopener noreferrer"
-                                   class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
-                                    Steam Page
-                                </a>
-                                <a href="https://www.youtube.com/watch?v=QsrRP501TBg" target="_blank" rel="noopener noreferrer"
-                                   class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
-                                    View Trailer
-                                </a>
-                            </div>
-                        </div>
+<section id="additional-projects" class="mt-20">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-10xl mx-auto justify-items-center">
+        <div class="w-full max-w-[600px]">
+            <div class="glass-effect rounded-lg overflow-hidden inner-border bg-black/30 shadow-[0_0_15px_rgba(255,255,255,0.25)] group transform hover:-translate-y-2 transition-transform duration-300 h-full flex flex-col">
+                <img src="Assets/Images/SubOptimal.png" alt="Rock Paper Scissor" class="w-full h-56 object-cover">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-2xl font-bold text-white mb-2">SubOptimal</h3>
+                    <p class="mb-4">
+                        SUBOPTIMAL is a co-op adventure where you and your crew pilot a submarine with intentionally bad controls which makes for a fun and silly friend slop game.
+                        With this project we won three categories at GameTown out of five.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/UEIcon.png" alt="Unreal Logo" class="w-6 h-6">
+                            Unreal Engine
+                        </span>
+                        <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/C++.png" alt="C++" class="w-6 h-6">
+                            C++
+                        </span>
+                        <span class="bg-purple-500/50 text-purple-200 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/RiderIcon.png" alt="RiderLogo" class="w-6 h-6">
+                            JetBrains Rider
+                        </span>
+                        <span class="bg-yellow-300 text-purple-500 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/Miro.png" alt="Miro Logo" class="w-6 h-6">
+                            Miro
+                        </span>
+                        <span class="bg-orange-500/50 text-purple-200 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/Perforce.png" alt="Perforce Logo" class="w-6 h-6">
+                            Perforce
+                        </span>
                     </div>
-                </div>
-                <div class="w-full max-w-[600px]">
-                    <div class="glass-effect rounded-lg overflow-hidden inner-border bg-black/30 shadow-[0_0_15px_rgba(255,255,255,0.25)] group transform hover:-translate-y-2 transition-transform duration-300 h-full flex flex-col">
-                        <img src="Assets/Images/PaperEngine.png" alt="Rock Paper Scissor" class="w-full h-56 object-cover">
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-bold text-white mb-2">Paper Engine</h3>
-                            <p class="mb-4">A 2D based Game engine made from scratch using open source libraries.
-                                It has an Entity Component System along with Custom Logging Macros and Lua Scripting. Made to be easy for begineers and new developers to get started with making simple 2D games</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/C++.png" alt="C++" class="w-6 h-6">
-                                C++
-                            </span>
-                                <span class="bg-cyan-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/C.png" alt="C" class="w-6 h-6">
-                                C
-                            </span>
-                                <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/lua.png" alt="Lua" class="w-6 h-6">
-                                Lua
-                            </span>
-                                <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/Github.png" alt="Github" class="w-6 h-6">
-                                Github
-                                </span>
-                                <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/VS_Studio.png" alt="Visual Studio" class="w-6 h-6">
-                                Visual Studio
-                                </span>
-                                <span class="bg-orange-500/50 text-orange-200 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/OpenGL.png" alt="OpenGL" class="w-6 h-6">
-                                OpenGL
-                            </span>
-                            </div>
-                            <div class="flex space-x-4">
-                                <a href="https://github.com/marcusonline97/StenSaxP-se" target="_blank" rel="noopener noreferrer"
-                                   class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
-                                    View Code
-                                </a>
-                                <a href="https://replit.com/@mjpersson97/StenSaxPase" target="_blank" rel="noopener noreferrer"
-                                   class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
-                                    View Demo
-                                </a>
-                            </div>
-                        </div>
+                    <div class="flex space-x-4">
+                        <a href="https://futuregames.itch.io/suboptimal#:~:text=Suboptimal%20is%20a%20low%20poly%204-player%20online%20co-op,teamwork%20and%20coordination%20to%20navigate%20obstacles%20and%20survive." target="_blank" rel="noopener noreferrer"
+                           class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
+                            View Demo
+                        </a>
+                        <a href="https://store.steampowered.com/app/4162130/SUBOPTIMAL/" target="_blank" rel="noopener noreferrer"
+                           class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
+                            Steam Page
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=QsrRP501TBg" target="_blank" rel="noopener noreferrer"
+                           class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
+                            View Trailer
+                        </a>
                     </div>
-                </div>
-                <div class="w-full max-w-[600px]">
-                    <div class="glass-effect rounded-lg overflow-hidden inner-border bg-black/30 shadow-[0_0_15px_rgba(255,255,255,0.25)] group transform hover:-translate-y-2 transition-transform duration-300 h-full flex flex-col">
-                    <img src="Assets/Images/vulkan-logo.png" alt="Vulkan" class="w-full h-56 object-contain">
-                        <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-bold text-white mb-2">Ark Engine</h3>
-                        <p class="mb-4">My own Vulkan based Game Engine as a side passion project for the sake of learning how to make some more features that openGL doesn't have access to such as dynamic rendering and layer management</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/C++.png" alt="C++" class="w-6 h-6">
-                                C++
-                            </span>
-                            <span class="bg-cyan-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/C.png" alt="C" class="w-6 h-6">
-                                C
-                            </span>
-                            <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/Github.png" alt="Github" class="w-6 h-6">
-                                Github
-                                </span>
-                            <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/VS_Studio.png" alt="Visual Studio" class="w-6 h-6">
-                                Visual Studio
-                                </span>
-                            <span class="bg-orange-500/50 text-orange-200 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">                                 
-                                <img src="Assets/Images/OpenGL.png" alt="OpenGL" class="w-4 h-4 ">
-                                Vulkan
-                            </span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://github.com/marcusonline97/Ark-Engine" target="_blank" rel="noopener noreferrer"
-                               class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
-                                View Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div class="w-full max-w-[600px]">
-                    <div class="glass-effect rounded-lg overflow-hidden inner-border bg-black/30 shadow-[0_0_15px_rgba(255,255,255,0.25)] group transform hover:-translate-y-2 transition-transform duration-300 h-full flex flex-col">
-                    <img src="Assets/Images/MiningGame.png" alt="Rock Paper Scissor" class="w-full h-56 object-cover">
-                        <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-bold text-white mb-2">Closed Access Mining Game</h3>
-                        <p class="mb-4">A 4-6 Coop mining game where you work as a group to excavate gems and mineral in order to progress in the game. In this project i have been contracted as gameplay programmer and network programmer. Along with continuing with developing our PCG Generator </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/UEIcon.png" alt="ue" class="w-6 h-6">
-                                Unreal Engine
-                            </span>
-                            <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/C++.png" alt="C++" class="w-6 h-6">
-                                C++
-                            </span>
-                            <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/RiderIcon.png" alt="Visual Studio" class="w-6 h-6">
-                                Jetbrains Rider
-                                </span>
-                            <span class="bg-orange-500/50 text-orange-200 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/Miro.png" alt="Miro" class="w-6 h-6">
-                                Miro
-                            </span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://github.com/marcusonline97/StenSaxP-se" target="_blank" rel="noopener noreferrer"
-                               class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
-                                View Code
-                            </a>
-                            <a href="https://replit.com/@mjpersson97/StenSaxPase" target="_blank" rel="noopener noreferrer"
-                               class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
-                                View Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div class="w-full max-w-[600px]">
-                    <div class="glass-effect rounded-lg overflow-hidden inner-border bg-black/30 shadow-[0_0_15px_rgba(255,255,255,0.25)] group transform hover:-translate-y-2 transition-transform duration-300 h-full flex flex-col">
-                    <img src="Assets/Images/PaperEngine.png" alt="Card Game" class="w-full h-56 object-cover">
-                        <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-bold text-white mb-2">Unreleased Card Game</h3>
-                        <p class="mb-4">A card game project where I have been contracted as a network engineer in charge of matchmaking and multiplayer sessions through Steamworks </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/UEIcon.png" alt="ue" class="w-6 h-6">
-                                Unreal Engine
-                            </span>
-                            <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/C++.png" alt="C++" class="w-6 h-6">
-                                C++
-                            </span>
-                            <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/Github.png" alt="Github" class="w-6 h-6">
-                                Github
-                                </span>
-                            <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/RiderIcon.png" alt="Visual Studio" class="w-6 h-6">
-                                Jetbrains Rider
-                                </span>
-                            <span class="bg-orange-500/50 text-orange-200 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/Miro.png" alt="Miro" class="w-6 h-6">
-                                Miro
-                            </span>
-                            <span class="bg-orange-500/50 text-orange-200 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/Miro.png" alt="Miro" class="w-6 h-6">
-                                Discord
-                            </span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://github.com/marcusonline97/StenSaxP-se" target="_blank" rel="noopener noreferrer"
-                               class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
-                                View Code
-                            </a>
-                            <a href="https://replit.com/@mjpersson97/StenSaxPase" target="_blank" rel="noopener noreferrer"
-                               class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
-                                View Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div class="w-full max-w-[600px]">
-                    <div class="glass-effect rounded-lg overflow-hidden inner-border bg-black/30 shadow-[0_0_15px_rgba(255,255,255,0.25)] group transform hover:-translate-y-2 transition-transform duration-300 h-full flex flex-col">
-                    <img src="Assets/Images/WorkSample.png" alt="Work Sample" class="w-full h-56 object-cover">
-                        <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-bold text-white mb-2">Animation Rig Work Sample</h3>
-                        <p class="mb-4">This was a work sample sent to me by another studio who wanted to with rigging up their spider model with procedural movement, it took a while but i eventually got it working.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/UEIcon.png" alt="Unreal Logo" class="w-6 h-6">
-                                Unreal Engine
-                            </span>
-                            <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/C++.png" alt="C++" class="w-6 h-6">
-                                C++
-                            </span>
-                            <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/Github.png" alt="Github" class="w-6 h-6">
-                                Github
-                                </span>
-                            <span class="bg-purple-500/50 text-purple-200 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/RiderIcon.png" alt="RiderLogo" class="w-6 h-6">
-                                JetBrains Rider
-                            </span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <span class="block mx-auto w-[500px] py-6 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-red-600 hover:text-black transition text-center">
-                                NDA‑protected development
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div class="w-full max-w-[600px] mx-auto">
-                    <div class="glass-effect rounded-lg overflow-hidden inner-border bg-black/30 shadow-[0_0_15px_rgba(255,255,255,0.25)] group transform hover:-translate-y-2 transition-transform duration-300 h-full flex flex-col">
-                    <img src="Assets/Images/RockPaperScissor.png" alt="Rock Paper Scissor" class="w-full h-56 object-cover">
-                        <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-bold text-white mb-2">Rock Paper Scissor Console App</h3>
-                        <p class="mb-4">A Python-based Project from when I was tutoring and doing volonteering work for KodCentrum a nonprofit and teaching kids how to get started with programming by making a console app in Python.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-cyan-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/python.png" alt="Replit" class="w-6 h-6">
-                                Python
-                            </span>
-                            <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/Github.png" alt="Github" class="w-6 h-6">
-                                Github
-                                </span>
-                            <span class="bg-orange-500/50 text-orange-200 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/Replit.png" alt="Replit" class="w-6 h-6">
-                                Replit
-                            </span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://github.com/marcusonline97/StenSaxP-se" target="_blank" rel="noopener noreferrer"
-                               class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
-                                View Code
-                            </a>
-                            <a href="https://replit.com/@mjpersson97/StenSaxPase" target="_blank" rel="noopener noreferrer"
-                               class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
-                                View Demo
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-                </div>
-                <div class="w-full max-w-[600px] mx-auto">
-                    <div class="glass-effect rounded-lg overflow-hidden inner-border bg-black/30 shadow-[0_0_15px_rgba(255,255,255,0.25)] group transform hover:-translate-y-2 transition-transform duration-300 h-full flex flex-col">
-                    <img src="Assets/Images/multithread.png" alt="Multithreading" class="w-full h-56 object-cover">
-                        <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-bold text-white mb-2">Multithreading in C</h3>
-                        <p class="mb-4">A Repository which I was working on with a friend when I was starting to get into learning the win32 api by learning how to multithread in the C language. The program is a counter that starts from 1 to 1000000.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-cyan-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/C.png" alt="C" class="w-6 h-6">
-                                C
-                            </span>
-                            <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/Github.png" alt="Github" class="w-6 h-6">
-                                Github
-                                </span>
-                            <span class="bg-purple-500/50 text-purple-200 text-sm font-medium px-2.5 py-1 rounded">Visual Studio</span>
-                        </div>
-                            
-                        <div class="flex space-x-4">
-                            <a href="https://github.com/marcusonline97/MyThreadProject" target="_blank" rel="noopener noreferrer"
-                               class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
-                                View Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <!-- This is where i need to continue in the next additional projects -->
-                <div class="w-full max-w-[600px] mx-auto">
-                    <div class="glass-effect rounded-lg overflow-hidden inner-border bg-black/30 shadow-[0_0_15px_rgba(255,255,255,0.25)] group transform hover:-translate-y-2 transition-transform duration-300 h-full flex flex-col">
-                    <img src="Assets/Images/Booth.jpg" alt="Ticket Program" class="w-full h-56 object-cover">
-                        <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-bold text-white mb-2">Parking App</h3>
-                        <p class="mb-4">A Project that I worked on while attending a program in web development where we were tasked with making a parking application in C# and getting used to programming in C#.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded">C#</span>
-                            <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/VS_Studio.png" alt="Visual Studio" class="w-6 h-6">
-                                Visual Studio
-                                </span>
-                            <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
-                                <img src="Assets/Images/Github.png" alt="Github" class="w-6 h-6">
-                                Github
-                                </span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://github.com/marcusonline97/Garage-1.0" target="_blank" rel="noopener noreferrer"
-                               class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
-                                View Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 </div>
             </div>
+        </div>
+        <div class="w-full max-w-[600px]">
+            <div class="glass-effect rounded-lg overflow-hidden inner-border bg-black/30 shadow-[0_0_15px_rgba(255,255,255,0.25)] group transform hover:-translate-y-2 transition-transform duration-300 h-full flex flex-col">
+                <img src="Assets/Images/PaperEngine.png" alt="Rock Paper Scissor" class="w-full h-56 object-cover">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-2xl font-bold text-white mb-2">Paper Engine</h3>
+                    <p class="mb-4">
+                        A 2D based Game engine made from scratch using open source libraries.
+                        It has an Entity Component System along with Custom Logging Macros and Lua Scripting. Made to be easy for begineers and new developers to get started with making simple 2D games
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/C++.png" alt="C++" class="w-6 h-6">
+                            C++
+                        </span>
+                        <span class="bg-cyan-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/C.png" alt="C" class="w-6 h-6">
+                            C
+                        </span>
+                        <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/lua.png" alt="Lua" class="w-6 h-6">
+                            Lua
+                        </span>
+                        <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/Github.png" alt="Github" class="w-6 h-6">
+                            Github
+                        </span>
+                        <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/VS_Studio.png" alt="Visual Studio" class="w-6 h-6">
+                            Visual Studio
+                        </span>
+                        <span class="bg-orange-500/50 text-orange-200 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/OpenGL.png" alt="OpenGL" class="w-6 h-6">
+                            OpenGL
+                        </span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/marcusonline97/StenSaxP-se" target="_blank" rel="noopener noreferrer"
+                           class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
+                            View Code
+                        </a>
+                        <a href="https://replit.com/@mjpersson97/StenSaxPase" target="_blank" rel="noopener noreferrer"
+                           class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
+                            View Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full max-w-[600px]">
+            <div class="glass-effect rounded-lg overflow-hidden inner-border bg-black/30 shadow-[0_0_15px_rgba(255,255,255,0.25)] group transform hover:-translate-y-2 transition-transform duration-300 h-full flex flex-col">
+                <img src="Assets/Images/vulkan-logo.png" alt="Vulkan" class="w-full h-56 object-contain">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-2xl font-bold text-white mb-2">Ark Engine</h3>
+                    <p class="mb-4">My own Vulkan based Game Engine as a side passion project for the sake of learning how to make some more features that openGL doesn't have access to such as dynamic rendering and layer management</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/C++.png" alt="C++" class="w-6 h-6">
+                            C++
+                        </span>
+                        <span class="bg-cyan-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/C.png" alt="C" class="w-6 h-6">
+                            C
+                        </span>
+                        <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/Github.png" alt="Github" class="w-6 h-6">
+                            Github
+                        </span>
+                        <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/VS_Studio.png" alt="Visual Studio" class="w-6 h-6">
+                            Visual Studio
+                        </span>
+                        <span class="bg-orange-500/50 text-orange-200 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/OpenGL.png" alt="OpenGL" class="w-4 h-4 ">
+                            Vulkan
+                        </span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/marcusonline97/Ark-Engine" target="_blank" rel="noopener noreferrer"
+                           class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
+                            View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full max-w-[600px]">
+            <div class="glass-effect rounded-lg overflow-hidden inner-border bg-black/30 shadow-[0_0_15px_rgba(255,255,255,0.25)] group transform hover:-translate-y-2 transition-transform duration-300 h-full flex flex-col">
+                <img src="Assets/Images/MiningGame.png" alt="Rock Paper Scissor" class="w-full h-56 object-cover">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-2xl font-bold text-white mb-2">Closed Access Mining Game</h3>
+                    <p class="mb-4">A 4-6 Coop mining game where you work as a group to excavate gems and mineral in order to progress in the game. In this project i have been contracted as gameplay programmer and network programmer. Along with continuing with developing our PCG Generator </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/UEIcon.png" alt="ue" class="w-6 h-6">
+                            Unreal Engine
+                        </span>
+                        <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/C++.png" alt="C++" class="w-6 h-6">
+                            C++
+                        </span>
+                        <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/RiderIcon.png" alt="Visual Studio" class="w-6 h-6">
+                            Jetbrains Rider
+                        </span>
+                        <span class="bg-orange-500/50 text-orange-200 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/Miro.png" alt="Miro" class="w-6 h-6">
+                            Miro
+                        </span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/marcusonline97/StenSaxP-se" target="_blank" rel="noopener noreferrer"
+                           class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
+                            View Code
+                        </a>
+                        <a href="https://replit.com/@mjpersson97/StenSaxPase" target="_blank" rel="noopener noreferrer"
+                           class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
+                            View Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full max-w-[600px]">
+            <div class="glass-effect rounded-lg overflow-hidden inner-border bg-black/30 shadow-[0_0_15px_rgba(255,255,255,0.25)] group transform hover:-translate-y-2 transition-transform duration-300 h-full flex flex-col">
+                <img src="Assets/Images/PaperEngine.png" alt="Card Game" class="w-full h-56 object-cover">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-2xl font-bold text-white mb-2">Unreleased Card Game</h3>
+                    <p class="mb-4">A card game project where I have been contracted as a network engineer in charge of matchmaking and multiplayer sessions through Steamworks </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/UEIcon.png" alt="ue" class="w-6 h-6">
+                            Unreal Engine
+                        </span>
+                        <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/C++.png" alt="C++" class="w-6 h-6">
+                            C++
+                        </span>
+                        <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/Github.png" alt="Github" class="w-6 h-6">
+                            Github
+                        </span>
+                        <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/RiderIcon.png" alt="Visual Studio" class="w-6 h-6">
+                            Jetbrains Rider
+                        </span>
+                        <span class="bg-orange-500/50 text-orange-200 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/Miro.png" alt="Miro" class="w-6 h-6">
+                            Miro
+                        </span>
+                        <span class="bg-orange-500/50 text-orange-200 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/Miro.png" alt="Miro" class="w-6 h-6">
+                            Discord
+                        </span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/marcusonline97/StenSaxP-se" target="_blank" rel="noopener noreferrer"
+                           class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
+                            View Code
+                        </a>
+                        <a href="https://replit.com/@mjpersson97/StenSaxPase" target="_blank" rel="noopener noreferrer"
+                           class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
+                            View Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full max-w-[600px]">
+            <div class="glass-effect rounded-lg overflow-hidden inner-border bg-black/30 shadow-[0_0_15px_rgba(255,255,255,0.25)] group transform hover:-translate-y-2 transition-transform duration-300 h-full flex flex-col">
+                <img src="Assets/Images/WorkSample.png" alt="Work Sample" class="w-full h-56 object-cover">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-2xl font-bold text-white mb-2">Animation Rig Work Sample</h3>
+                    <p class="mb-4">This was a work sample sent to me by another studio who wanted to with rigging up their spider model with procedural movement, it took a while but i eventually got it working.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/UEIcon.png" alt="Unreal Logo" class="w-6 h-6">
+                            Unreal Engine
+                        </span>
+                        <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/C++.png" alt="C++" class="w-6 h-6">
+                            C++
+                        </span>
+                        <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/Github.png" alt="Github" class="w-6 h-6">
+                            Github
+                        </span>
+                        <span class="bg-purple-500/50 text-purple-200 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/RiderIcon.png" alt="RiderLogo" class="w-6 h-6">
+                            JetBrains Rider
+                        </span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <span class="block mx-auto w-[500px] py-6 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-red-600 hover:text-black transition text-center">
+                            NDA‑protected development
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full max-w-[600px] mx-auto">
+            <div class="glass-effect rounded-lg overflow-hidden inner-border bg-black/30 shadow-[0_0_15px_rgba(255,255,255,0.25)] group transform hover:-translate-y-2 transition-transform duration-300 h-full flex flex-col">
+                <img src="Assets/Images/RockPaperScissor.png" alt="Rock Paper Scissor" class="w-full h-56 object-cover">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-2xl font-bold text-white mb-2">Rock Paper Scissor Console App</h3>
+                    <p class="mb-4">A Python-based Project from when I was tutoring and doing volonteering work for KodCentrum a nonprofit and teaching kids how to get started with programming by making a console app in Python.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-cyan-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/python.png" alt="Replit" class="w-6 h-6">
+                            Python
+                        </span>
+                        <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/Github.png" alt="Github" class="w-6 h-6">
+                            Github
+                        </span>
+                        <span class="bg-orange-500/50 text-orange-200 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/Replit.png" alt="Replit" class="w-6 h-6">
+                            Replit
+                        </span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/marcusonline97/StenSaxP-se" target="_blank" rel="noopener noreferrer"
+                           class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
+                            View Code
+                        </a>
+                        <a href="https://replit.com/@mjpersson97/StenSaxPase" target="_blank" rel="noopener noreferrer"
+                           class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
+                            View Demo
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="w-full max-w-[600px] mx-auto">
+            <div class="glass-effect rounded-lg overflow-hidden inner-border bg-black/30 shadow-[0_0_15px_rgba(255,255,255,0.25)] group transform hover:-translate-y-2 transition-transform duration-300 h-full flex flex-col">
+                <img src="Assets/Images/multithread.png" alt="Multithreading" class="w-full h-56 object-cover">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-2xl font-bold text-white mb-2">Multithreading in C</h3>
+                    <p class="mb-4">A Repository which I was working on with a friend when I was starting to get into learning the win32 api by learning how to multithread in the C language. The program is a counter that starts from 1 to 1000000.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-cyan-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/C.png" alt="C" class="w-6 h-6">
+                            C
+                        </span>
+                        <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/Github.png" alt="Github" class="w-6 h-6">
+                            Github
+                        </span>
+                        <span class="bg-purple-500/50 text-purple-200 text-sm font-medium px-2.5 py-1 rounded">Visual Studio</span>
+                    </div>
+
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/marcusonline97/MyThreadProject" target="_blank" rel="noopener noreferrer"
+                           class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
+                            View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- This is where i need to continue in the next additional projects -->
+        <div class="w-full max-w-[600px] mx-auto">
+            <div class="glass-effect rounded-lg overflow-hidden inner-border bg-black/30 shadow-[0_0_15px_rgba(255,255,255,0.25)] group transform hover:-translate-y-2 transition-transform duration-300 h-full flex flex-col">
+                <img src="Assets/Images/Booth.jpg" alt="Ticket Program" class="w-full h-56 object-cover">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-2xl font-bold text-white mb-2">Parking App</h3>
+                    <p class="mb-4">A Project that I worked on while attending a program in web development where we were tasked with making a parking application in C# and getting used to programming in C#.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded">C#</span>
+                        <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/VS_Studio.png" alt="Visual Studio" class="w-6 h-6">
+                            Visual Studio
+                        </span>
+                        <span class="bg-blue-900/50 text-cyan-300 text-sm font-medium px-2.5 py-1 rounded inline-flex items-center gap-2">
+                            <img src="Assets/Images/Github.png" alt="Github" class="w-6 h-6">
+                            Github
+                        </span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/marcusonline97/Garage-1.0" target="_blank" rel="noopener noreferrer"
+                           class="inline-block px-9 py-3 border border-blue-300 text-blue-300 rounded-md text-sm font-semibold hover:bg-blue-300 hover:text-black transition">
+                            View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="contact" class="text-center mt-20">
@@ -539,4 +544,5 @@
 <footer class="text-center py-6 mt-12 border-t border-neutral-800">
     <p class="text-gray-400">&copy; 2025 Marcus Persson. All Rights Reserved.</p>
 </footer>
+</body>
 </html>
