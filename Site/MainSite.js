@@ -1,10 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
     const emailButton = document.getElementById("emailCopyBtn");
+    if (!emailButton) {
+        return;
+    }
 
     emailButton.addEventListener("click", (e) => {
         e.preventDefault();
 
-        const email = "Mjpersson97@gmail.com"; 
+        const email = "Mjpersson97@gmail.com";
 
         navigator.clipboard.writeText(email)
             .then(() => {
