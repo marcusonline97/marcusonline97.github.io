@@ -168,18 +168,16 @@
     </section>
 
     <section class="mt-8 md:mt-10">
-        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Video</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Test for a Video player, video is of my opengl engine not said project</h2>
         <div class="glass-panel rounded-2xl p-4 md:p-6">
-            <div class="relative w-full overflow-hidden rounded-xl" style="padding-top: 56.25%;">
-                <iframe
-                        class="absolute inset-0 w-full h-full"
-                        src="https://www.youtube.com/watch?v=fvHXdNciZ1g"
-                        title="Samsara gameplay video"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
-                </iframe>
-            </div>
+            <video
+                    class="w-full rounded-xl"
+                    controls
+                    preload="metadata"
+                    poster="../Assets/Images/SamsaraDemo.png">
+                <source src="../Assets/Videos/Engine.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </section>
 
